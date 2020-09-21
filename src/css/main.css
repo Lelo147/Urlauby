@@ -1,0 +1,46 @@
+.hidden
+{
+    display: none;
+}
+
+li
+{
+    list-style: none;
+}
+
+.container
+{
+    margin: 0 auto;
+    width: 80%;
+}
+
+header
+{
+    background: #178105;
+}
+
+header::after
+{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.container h4
+{
+    float: left;
+}
+
+.container nav
+{
+    float: right;
+}
+
+.container button
+{
+    border: none;
+    background-color: #178105;
+}
+
+
+

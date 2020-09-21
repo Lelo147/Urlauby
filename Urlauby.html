@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+    <title>Urlauby</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./src/css/main.css" type="text/css" />
+ </head>
+ 
+
+
+ <body>
+
+    <header>
+        <div class="container">
+            <h4>Urlauby</h4>
+            <nav>
+                <ul class="navbar">
+                    <li><button class="back-btn hidden">Zurück</button></li>
+                    <li><button class="my-account-btn hidden">Mein Konto</button></li>
+                    <li><button class="create-vacation-btn hidden">Urlaub erstellen</button></li>
+                    <li><button class="edit-vacation-btn hidden">Urlaub bearbeiten</button></li>
+                    <li><button class="upload-images-btn hidden">Bilder hochladen</button></li>                
+                    <li><button class="logout-btn hidden">Logout</button></li>
+                    <li><button class="login-btn">Login</button></li>                
+                </ul>
+            </nav>
+        </div>  
+    </header>
+
+
+
+    <main>
+        <section class="starting-page">
+            <p>
+                Urlauby ist eine Website, die darauf ausgerichtet ist möglichst einfach Urlaubsbilder mit 
+                Freunden zu teilen! Dazu kannst du einen neuen Urlaub mit Passwort erstellen und dieses an 
+                deine Freunde weitergeben. In diesem Urlaub hat dann jeder Teilnehmer die Möglichkeit Bilder
+                und Videos hoch- und runterzuladen, eigene Slide-Shows zu erstellen, oder vielfältige Filter
+                einzustellen, um sich nur bestimmte Fotos anzusehen.
+            </p>
+            <button>Jetzt registrieren!</button>
+        </section>
+
+
+
+        <form class="register hidden">
+            <div>E-Mailadresse eingeben: </div>
+            <input type="text" name="email" maxlenght="40">
+
+            <div>Username eingeben: </div>
+            <input type="text" name="username" maxlength="30"/>
+
+            <div>Passwort eingeben: </div>
+            <input type="password" name="password-1" maxlength="30"/>
+            <div>Passwort wiederholen: </div>
+            <input type="password" name="password-2" maxlength="30"/>
+
+            <button>Registrieren</button>
+        </form>
+
+
+
+        <form class="login hidden">
+            <div>Username/Emailadresse: </div>
+            <input type="text" name="username-email" maxlength="30"/>
+
+            <div>Passwort: </div>
+            <input type="password" name="password" maxlength="30"/>
+
+            <button>Login</button>
+        </form>
+
+
+        
+        <form class="forgot-password hidden">
+            <h3>Geben Sie Ihren Username oder Ihre Emailadresse an, dann wird Ihnen ein Code zugesendet!</h3>  
+
+            <div>Username/Emailadresse: </div>
+            <input type="text" name="username-email-forgot-pwd" maxlength="40"/> 
+            <button class="send-mail-btn">Email senden</button>
+
+            <div>Code: </div>
+            <input type="text" name="code" maxlength="40"/> 
+            <button class="submit-code-btn">Eingabe</button>
+
+            <section class="change-password">
+                <div>Passwort eingeben: </div>
+                <input type="password" name="password-1-forgot-pwd" maxlength="30"/>
+                <div>Passwort wiederholen: </div>
+                <input type="password" name="password-2-forgot-pwd" maxlength="30"/>
+                <button>Passwort ändern</button>
+            </section>   
+        </form>
+
+
+
+        <section class="your-vacations hidden">
+            <h3>Deine Urlaube</h3>
+            <ul>
+
+            </ul>
+        </section>
+
+
+
+        <form class="search-vacation hidden">
+            <h3>Finde deinen Urlaub</h3>
+            <input type="search" name="search" maxlength="40"/> 
+
+            <button>Suche</button>
+            <button>Alle anzeigen</button>
+            <ul>
+
+            </ul>
+        </form>
+
+
+
+        <form class="my-account hidden">
+            <div>E-Mailadresse: </div> 
+            <input type="text" name="email-my-account" maxlenght="40">
+            <button>E-Mailadresse ändern</button>
+
+            <div>Username: </div> 
+            <input type="text" name="username-my-account" maxlenght="30">
+            <button>Username ändern</button>
+
+            <div>Passwort: </div> 
+            <input type="password" name="password-1-my-account" maxlenght="30">
+            <div>Passwort wiederholen: </div> 
+            <input type="password" name="password-2-my-account" maxlenght="30">
+            <button>Passwort ändern</button>      
+        </form>
+
+
+
+        <form enctype="multipart/form-data" class="create-vacation hidden">
+            <div>Name des Urlaubs eingeben: </div>
+            <input type="text" name="vacation-name" maxlenght="40">
+
+            <div>Passwort des Urlaubs eingeben: </div>
+            <input type="password" name="vacation-password-1"maxlenght="40">
+            <div>Passwort wiederholen: </div>
+            <input type="password" name="vacation-password-2" maxlenght="40">
+
+            <div>Beschreibung (optional): </div>
+            <textarea maxlength="2000"></textarea>
+
+            <div>Titelbild (optional): </div>
+            <input type="file" name="cover-photo" maxlength="255">
+
+            <button>Urlaub erstellen</button>
+        </form>
+
+
+
+        <form enctype="multipart/form-data" class="edit-vacation hidden">
+            <div>Name des Urlaubs: </div>
+            <input type="text" name="vacation-name-edit" maxlenght="40">
+            <button>Name ändern</button>
+
+            <div>Passwort: </div>
+            <input type="password" name="vacation-password-1-edit"maxlenght="40">
+            <div>Passwort wiederholen: </div>
+            <input type="password" name="vacation-password-2-edit" maxlenght="40">
+            <button>Passwort ändern</button>
+
+            <div>Beschreibung: </div>
+            <textarea cols="50" rows="5"></textarea>
+            <button>Beschreibung ändern</button>
+
+            <div>Titelbild: </div>
+            <input type="file" name="cover-photo-edit" maxlength="255">
+            <button>Titelbild ändern</button>
+        </form>
+
+
+
+        <form enctype="multipart/form-data" class="upload-images hidden">
+            <h3>Neue Bilder hochladen</h3>
+
+            <div>Wählen Sie Bilder zum Upload aus: </div>
+            <input type="file" name="vacation-images[]" maxlength="255" multiple>
+
+            <button>Bilder hochladen</button>
+        </form>
+
+
+
+        <form enctype="multipart/form-data" class="vacation hidden">
+            <ul class="filter">
+
+            </ul>
+            <button>Filter anwenden</button>
+            <ul class="images">
+
+            </ul>
+        </form>
+        
+    </main>
+     
+ </body>
+
+ <script type="module" src="./src/js/index.js"></script>
+ 
+</html>
